@@ -1,0 +1,3 @@
+# Shell Script Race Condition
+
+This repository demonstrates a common but subtle error in shell scripting: race conditions.  The `bug.sh` script shows a simple example where two background processes increment a shared counter.  Because of the lack of synchronization, the final counter value will almost certainly be less than the expected 2000 (1000 increments from each process).  The solution (`bugSolution.sh`) demonstrates how to mitigate the race condition using a lock file.
